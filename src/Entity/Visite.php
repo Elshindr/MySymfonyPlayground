@@ -42,6 +42,16 @@ class Visite
      */
     private $avis;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $tempmin;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $tempmax;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +113,30 @@ class Visite
     public function setAvis(?string $avis): self
     {
         $this->avis = $avis;
+
+        return $this;
+    }
+
+    public function getTempmin(): ?int
+    {
+        return $this->tempmin;
+    }
+
+    public function setTempmin(?int $tempmin): self
+    {
+        $this->tempmin = $tempmin;
+
+        return $this;
+    }
+
+    public function getTempmax(): ?int
+    {
+        return $this->tempmax;
+    }
+
+    public function setTempmax(?int $tempmax): self
+    {
+        $this->tempmax = $tempmax;
 
         return $this;
     }
