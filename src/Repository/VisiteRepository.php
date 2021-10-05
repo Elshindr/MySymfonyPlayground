@@ -30,6 +30,30 @@ class VisiteRepository extends ServiceEntityRepository
                 ->getQuery()
                 ->getResult();
     }
+    
+    /**
+     * Get tout les records dont le champ égal à la valeur passée
+     * en parametre, ou tous si la valeur est vide
+     * @param type $champ
+     * @param type $valeur
+     * @return Visite[]
+     */
+    public function findByEqualValue($champ, $valeur): array{
+        if($valeur == ""){
+            return $this->createQueryBuilder('v')
+                ->orderBy('v.'.$champ, 'ASC')
+                ->getQuery()
+                ->getResult();
+    }else{
+        return $this->createQueryBuilder('v')
+                ->where('v.'.$champ.'=:valeur')
+                ->setParameter('valeur', $valeur)
+                ->orderBy('v.datecreation', 'DESC')
+                ->getQuery()
+                ->getResult();
+    }
+        }
+        
     // /**
     //  * @return Visite[] Returns an array of Visite objects
     //  */
