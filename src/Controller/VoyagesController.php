@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Description of VoyagesController
  *
- * @author Ydrani
+ * @author Elshindr
  */
 class VoyagesController extends AbstractController {
     /**
@@ -36,14 +36,25 @@ class VoyagesController extends AbstractController {
     }
     
     /**
-     * @Route("/voyages", name ="MESPUTAINS DE PASvoyages")
+     * @Route("/voyages", name ="MES PAS voyages")
      * @return Response
      */
     public function index() : Response {
-        $visites = $this->repository->findAll();
+        $visites = $this->repository->findAllOrderBy('datecreation','DESC');
        dump($visites);
         
         return $this->render("pages/voyages.html.twig", ['visites' => $visites]);
     }
-    //put your code here
+    
+    
+    /**
+     * @Route("/voyages/tri/{champ}/{ordre}", name="voyages.sort")
+     * @param type $champ
+     * @param type $ordre
+     * @return Response
+     */
+    public function sort($champ, $ordre):Response{
+        $visites = $this->repository->findAllOrderBy($champ, $ordre);
+        return $this->render("pages/voyages.html.twig", ['visites' => $visites]);
+    }
 }

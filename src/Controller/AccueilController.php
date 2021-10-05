@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Description of AccueilController
  *
- * @author Ydrani
+ * @author Elshindr
  */
 class AccueilController extends AbstractController{
     /**
