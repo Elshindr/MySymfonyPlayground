@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace App\Controller;
+namespace App\Controller\front;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

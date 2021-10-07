@@ -6,14 +6,13 @@
  * and open the template in the editor.
  */
 
-namespace App\Controller;
+namespace App\Controller\front;
 
 use App\Repository\VisiteRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use function dump;
 
 /**
  * Description of VoyagesController
@@ -26,7 +25,6 @@ class VoyagesController extends AbstractController {
      * @var VisiteRepository
      */
     private $repository;
-    
     
     /**
      * 
@@ -43,7 +41,6 @@ class VoyagesController extends AbstractController {
      */
     public function index() : Response {
         $visites = $this->repository->findAllOrderBy('datecreation','DESC');
-       dump($visites);
         
         return $this->render("pages/voyages.html.twig", ['visites' => $visites]);
     }
