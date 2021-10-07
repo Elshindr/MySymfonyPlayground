@@ -21,7 +21,7 @@
             {% for visite in visites %}
                 <tr>
                     <td>
-                        <h5 class="text-primary"> {{ visite.ville }} </h5>
+                        <h5 class="text-primary">{{ visite.ville }}</h5>
                     </td>
                     <td>
                         {{ visite.pays }}
@@ -30,7 +30,7 @@
                         {{ visite.datecreationstring }}
                     </td>
                     <td>
-                        <a href="#" class="btn btn-secondary"> Editer</a>
+                        <a href="{{ path('admin.voyage.edit', {id:visite.id}) }}" class="btn btn-secondary">Editer</a>
                         <a href="{{ path('admin.voyage.suppr', {id:visite.id}) }}" class="btn btn-danger" onclick="return confirm('Supprimer {{ visite.ville }}?')"> Supprimer</a>
                     </td>
                 </tr>
