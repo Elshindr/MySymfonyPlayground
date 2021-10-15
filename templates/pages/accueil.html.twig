@@ -1,5 +1,42 @@
 {% extends "basefront.html.twig" %}
 
 {% block body %}
-<h1>MA super page</h1>
+<h1>Bienvenue sur ce site!</h1>
+<p>Dans la partie <a href="{{ path('MES PAS voyages') }}">Voyages</a>, vous pouvez voi la liste ds visites que j'ai effectué dans diverses villes. A chaque visite, j'ai précisé la ville visitée, le pays, une note sur 20, la date de visite ainsi que l'intervalle de température rencontré.
+Vous pouvez trier la liste en fonction des villes des pays, des notes et des dates.En cliquant sur le nom de ville, vous pouvez accéder à ces incroyables informations. Enfin, vous pouvez m'envoyer de super emails via la partie <a href="{{ path('contact') }}"'>Contact</a>, faites avec amour...</p>
+       <table>
+        <tr>
+            {% for visite in visites %}
+                <td style="vertical-align: text-top; width: 50%">
+                    <div class="row mt-3 mr-3">
+                        <div class="col">
+                            <p>{{ visite.datecreationstring }}</p>
+                            <h3 class="text-primary mt-1">
+                                <a href="{{ path('voyages.showone', {id:visite.id}) }}">{{ visite.ville }}</a>
+                            </h3>
+                            <p>{{ visite.pays }}</p>
+                            {% if visite.note>=10 %}
+                                <p class="text-success mt-1">{{ visite.note }}/20</p>
+                            {% else %}
+                                <p class="text-danger mt-1">{{ visite.note }}/20</p>
+                            {% endif %}
+                            <p class="mt-5">t° entre {{ visite.tempmin }}° et {{ visite.tempmax }}°</p>
+                            <p class="mt-1"><strong>Environnements :</strong><br/>
+                                {% for environnement in visite.environnements %}
+                                    {{ environnement.nom }}
+                                {% endfor %}
+                            </p>
+                        </div>    
+                        <div class="col">
+                            <!-- emplacement photo -->
+                            {% if visite.imagename %}
+                                <img src="{{ app.request.getBasePath()~vich_uploader_asset(visite, 'imageFile') }}" 
+                                     class="card-img-top" style="with:100%;height:auto;">
+                            {% endif %}
+                        </div>
+                    </div>                    
+                </td>
+            {% endfor %}    
+        </tr>
+    </table>
 {% endblock %}
