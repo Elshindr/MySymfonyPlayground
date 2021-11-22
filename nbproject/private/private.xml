@@ -3,8 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/wamp64/www/mesvoyages/src/Controller/front/AccueilController.php</file>
+            <file>file:/C:/wamp64/www/mesvoyages/vendor/composer/autoload_namespaces.php</file>
+            <file>file:/C:/wamp64/www/mesvoyages/public/index.php</file>
             <file>file:/C:/wamp64/www/mesvoyages/src/Controller/front/VoyagesController.php</file>
+            <file>file:/C:/wamp64/www/mesvoyages/src/Controller/front/ContactController.php</file>
+            <file>file:/C:/wamp64/www/mesvoyages/.env</file>
+            <file>file:/C:/wamp64/www/mesvoyages/composer.json</file>
             <file>file:/C:/wamp64/www/mesvoyages/templates/pages/accueil.html.twig</file>
+            <file>file:/C:/wamp64/www/mesvoyages/config/bootstrap.php</file>
+            <file>file:/C:/wamp64/www/mesvoyages/public/.htaccess</file>
+            <file>file:/C:/wamp64/www/mesvoyages/vendor/composer/autoload_files.php</file>
         </group>
     </open-files>
 </project-private>
