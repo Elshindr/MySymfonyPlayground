@@ -1,7 +1,7 @@
 doctrine:
     dbal:
         dbname:               voyages
-        #host:                 localhost
+        host:                 localhost
         # configure these for your database server
         driver: 'pdo_mysql'
         server_version: '5.7'
