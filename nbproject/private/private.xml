@@ -5,12 +5,12 @@
         <group>
             <file>file:/C:/wamp64/www/mesvoyages/public/index.php</file>
             <file>file:/C:/wamp64/www/mesvoyages/vendor/composer/autoload_real.php</file>
+            <file>file:/C:/wamp64/www/mesvoyages/Procfie</file>
             <file>file:/C:/wamp64/www/mesvoyages/vendor/composer/ClassLoader.php</file>
-            <file>file:/C:/wamp64/www/mesvoyages/Procfile</file>
             <file>file:/C:/wamp64/www/mesvoyages/.env</file>
             <file>file:/C:/wamp64/www/mesvoyages/var/log/prod.log</file>
+            <file>file:/C:/wamp64/www/mesvoyages/composer.json</file>
             <file>file:/C:/wamp64/www/mesvoyages/var/log/dev.log</file>
-            <file>file:/C:/wamp64/www/mesvoyages/public/.htaccess</file>
         </group>
     </open-files>
 </project-private>
